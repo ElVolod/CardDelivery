@@ -30,6 +30,6 @@ public class CardDeliveryTest {
         $$("button").find(Condition.exactText("Забронировать")).click();
         $("[data-test-id='notification']")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
-                .shouldHave(Condition.text("Успешно!"));
+                .shouldHave(Condition.text("Успешно! Встреча успешно забронирована на " + planningDate));
     }
 }
