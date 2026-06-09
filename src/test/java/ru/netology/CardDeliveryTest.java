@@ -21,7 +21,8 @@ public class CardDeliveryTest {
     void shouldCardDeliveryForm() throws InterruptedException {
         Selenide.open("http://localhost:9999");
         $("[data-test-id='city'] input").setValue("Элиста");
-        $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
+        $("[data-test-id='date'] input").click();
+        $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         String planningDate = generateDate(4);
         $("[data-test-id='date'] input").setValue(planningDate);
         $("[data-test-id='name'] input").setValue("Сидоров Иван");
