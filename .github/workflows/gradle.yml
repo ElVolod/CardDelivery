@@ -32,7 +32,7 @@ jobs:
         run: java -jar ./artifacts/app-card-delivery.jar &
 
       - name: Run tests with Gradle
-        run: ./gradlew test -Dselenide.headless=true
+        run: ./gradlew test -Dselenide.headless=true --info
 
 # Команда `chmod +x gradlew` делает файл gradlew исполняемым в linux.
 # Команда `./gradlew test` собирает ваш проект и запускает тесты.
